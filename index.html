@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيادات الأمل - حجز موعد</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- قسم الحجز -->
+    <section id="booking" class="booking">
+        <h2>احجز موعدك الآن</h2>
+        <form id="booking-form" action="https://formspree.io/f/xanybwok" method="POST">
+            
+            <!-- اسم المريض -->
+            <label for="name">اسمك:</label>
+            <input type="text" id="name" name="name" required placeholder="أدخل اسمك بالكامل">
+            
+            <!-- العمر -->
+            <label for="age">عمرك:</label>
+            <input type="number" id="age" name="age" required placeholder="أدخل عمرك">
+            
+            <!-- الجنس -->
+            <label for="gender">الجنس:</label>
+            <select id="gender" name="gender" required>
+                <option value="">اختار الجنس</option>
+                <option value="ذكر">ذكر</option>
+                <option value="أنثى">أنثى</option>
+            </select>
+
+            <!-- وصف الحالة -->
+            <label for="condition">وصف الحالة:</label>
+            <textarea id="condition" name="condition" rows="4" required placeholder="أدخل وصف حالتك الصحية"></textarea>
+
+            <!-- الخدمة المطلوبة -->
+            <label for="service">الخدمة المطلوبة:</label>
+            <select id="service" name="service" required>
+                <option value="">اختار الخدمة</option>
+                <option value="زراعة الأسنان">زراعة الأسنان</option>
+                <option value="تقويم الأسنان">تقويم الأسنان</option>
+                <option value="حشوات تجميلية">حشوات تجميلية</option>
+                <option value="تنظيف الأسنان">تنظيف الأسنان</option>
+            </select>
+
+            <!-- اختيار الطبيب -->
+            <label for="doctor">اختار الطبيب:</label>
+            <div class="doctor-options">
+                <div class="doctor-card">
+                    <input type="radio" id="doctor1" name="doctor" value="د. أحمد علي" required>
+                    <label for="doctor1">
+                        <img src="doctor1.jpg" alt="د. أحمد علي">
+                        <div class="doctor-name">د. أحمد علي</div>
+                        <div class="specialization">زراعة الأسنان</div>
+                    </label>
+                </div>
+                <div class="doctor-card">
+                    <input type="radio" id="doctor2" name="doctor" value="د. فاطمة محمود" required>
+                    <label for="doctor2">
+                        <img src="doctor2.jpg" alt="د. فاطمة محمود">
+                        <div class="doctor-name">د. فاطمة محمود</div>
+                        <div class="specialization">تقويم الأسنان</div>
+                    </label>
+                </div>
+                <div class="doctor-card">
+                    <input type="radio" id="doctor3" name="doctor" value="د. سامي يوسف" required>
+                    <label for="doctor3">
+                        <img src="doctor3.jpg" alt="د. سامي يوسف">
+                        <div class="doctor-name">د. سامي يوسف</div>
+                        <div class="specialization">حشوات تجميلية</div>
+                    </label>
+                </div>
+                <div class="doctor-card">
+                    <input type="radio" id="doctor4" name="doctor" value="د. سعاد جاسم" required>
+                    <label for="doctor4">
+                        <img src="doctor4.jpg" alt="د. سعاد جاسم">
+                        <div class="doctor-name">د. سعاد جاسم</div>
+                        <div class="specialization">تنظيف الأسنان</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- التاريخ -->
+            <label for="date">اختار التاريخ:</label>
+            <input type="date" id="date" name="date" required>
+
+            <!-- الوقت -->
+            <label for="time">اختار الوقت:</label>
+            <input type="time" id="time" name="time" required>
+
+            <!-- زر إرسال الحجز -->
+            <button type="submit" id="submit-btn">إرسال الحجز</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html
